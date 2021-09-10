@@ -1,0 +1,48 @@
+#include <ctime>
+#include <fstream>
+#include <filesystem>
+#include <direct.h>
+#include <stdio.h>//Здесь находятся функции переименования и удаления
+#include <io.h>//Здесь находятся функции для поиска файлов
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+class PET {
+public:
+    string NAME;
+    int AGE;
+};
+class CAT :public PET {
+public:
+    CAT(string name, int age) {
+        this->NAME = name;
+        this->AGE = age;
+        cout << "Cat name is: " << name << ", Cat Age is: " << age << endl;
+    }
+};
+class DOG :public PET {
+public:
+    DOG(string name, int age) {
+        this->NAME = name;
+        this->AGE = age;
+        cout << "Dog name is: " << name << ", Dog Age is: " << age << endl;
+    }
+};
+int main()
+{
+    cout << "Input Cat name :";
+    string catName; cin >> catName;
+    cout << endl;
+    cout << "Input Cat age :";
+    int catAge; cin >> catAge;
+    CAT cat(catName, catAge);
+    cout << "----------------------\n";
+    cout << "Input Dog name :";
+    string dogName; cin >> dogName;
+    cout << endl;
+    cout << "Input Dog age :";
+    int dogAge; cin >> dogAge;
+    DOG dog(dogName, dogAge);
+    std::cout << "Hello World!\n";
+}
